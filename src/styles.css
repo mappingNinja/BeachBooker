@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700');
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
+
+#root {
+  font-family: 'TT Norms Pro Regular ,Helvetica,sans-serif';
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.slick-arrow {
+  height: 40px;
+  width: 40px;
+}
+.slick-prev:before {
+  margin-left: -13px;
+}
+.slick-next:before {
+  margin-left: 15px !important;
+}
+.slick-prev:before,
+.slick-next:before {
+  font-size: 40px;
+  color: #000 !important;
+}
+.react-tel-input input {
+  width: 100% !important;
+  border-radius: 19px !important;
+  border: 2px solid #eaedf8 !important;
+  color: #06133a;
+}
+.special-label {
+  /* font-family: 'TT Norms Pro Regular ,Helvetica,sans-serif'; */
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.42em;
+  color: #727781 !important;
+}
+.landing-calendar {
+  border-radius: 19px;
+  position: absolute;
+  z-index: 9999 !important;
+  left: 20px;
+  top: 100%;
+}
+.landing-calendar .rdrMonthAndYearWrapper {
+  height: 40px;
+}
+.landing-calendar .rdrDay {
+  height: 2.2rem;
+  width: calc(100% / 10);
+}
