@@ -4,7 +4,6 @@ import CircularProgress from '@mui/material/CircularProgress';
 import { useCallback, useEffect, useState } from 'react';
 import { getBeachSearchData } from 'src/services/api/user.api';
 import { Box, ListItem, ListItemAvatar, ListItemButton, ListItemText } from '@mui/material';
-import axios from 'axios';
 
 export default function BeachSearchComponent({ handleOnchangeCustomer, label, style, setCity, setCityId }) {
   const [open, setOpen] = useState(false);
@@ -25,11 +24,15 @@ export default function BeachSearchComponent({ handleOnchangeCustomer, label, st
     return;
   };
 
+
+  
+// https://api.beachbooker.fr/api/contact/partner
+
   const handleInputChange = useCallback((value) => {
     setNewInputValue(value);
     const cityValue = value?.replace(' ', '-');
     setCity(cityValue);
-    if (!value) {
+    if (!value && typeof setCityId !== 'undefined') {
       setCityId('');
     }
   }, []);
@@ -76,7 +79,7 @@ export default function BeachSearchComponent({ handleOnchangeCustomer, label, st
             dense={true}
             sx={{ height: '60px', borderRadius: '14px' }}
           >
-            <ListItemButton onClick={() => setCityId(option?.id)}>
+            <ListItemButton onClick={() => setCityId && setCityId(option?.id)}>
               <ListItemAvatar>
                 <Box
                   sx={{
